@@ -1,0 +1,165 @@
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+}
+
+.auth-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+.auth-input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.auth-button {
+  padding: 12px;
+  width: 100%;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-button:hover {
+  background: #0056b3;
+}
+
+.auth-toggle-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+
+.toggle-title {
+  display: flex;
+  gap: 5px;
+}
+
+.auth-message {
+  margin-top: 15px;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+.audio-recorder {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.recorder-section {
+  margin-bottom: 20px;
+}
+
+.sound-wave {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  border-radius: 10px;
+  background: #e0f7fa;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.record-button {
+  background: #007bff;
+  color: white;
+}
+
+.record-button:disabled {
+  background: #b0c4de;
+  cursor: not-allowed;
+}
+
+.stop-button {
+  background: #ff4081;
+  color: white;
+}
+
+.stop-button:disabled {
+  background: #f8b2c8;
+  cursor: not-allowed;
+}
+
+.playback-section {
+  margin: 20px 0;
+}
+
+.audio-player {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.upload-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.upload-button:disabled {
+  background: #a8d5a0;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  opacity: 0.9;
+}
