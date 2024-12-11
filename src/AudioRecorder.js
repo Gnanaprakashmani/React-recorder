@@ -7,6 +7,7 @@ import MicRecorder from "mic-recorder-to-mp3";
 
 function AudioRecorder() {
   const [audioData, setAudioData] = useState(null);
+  const [record,setRecord]=useState("Start Recording")
   const recorderRef = useRef(null);
 
   const startRecording = () => {
@@ -14,7 +15,7 @@ function AudioRecorder() {
     recorderRef.current = recorder;
 
     recorder.start().then(() => {
-      console.log("Recording started...");
+        setRecord("Recording started...");
     }).catch((e) => {
       console.error("Error starting recording", e);
     });
@@ -23,6 +24,7 @@ function AudioRecorder() {
   const stopRecording = () => {
     recorderRef.current.stop().getMp3().then(([buffer, blob]) => {
       const audioURL = URL.createObjectURL(blob);
+      setRecord("Start Recording")
       setAudioData({ blob, blobURL: audioURL });
     }).catch((e) => {
       console.error("Error stopping recording", e);
@@ -67,6 +69,7 @@ function AudioRecorder() {
       <h1 className="title">Audio Recorder App</h1>
 
       <div className="recorder-section">
+        <div className="record-start">{record}</div>
         <div className="button-group">
           <button onClick={startRecording} className="record-button">
             Start Recording
