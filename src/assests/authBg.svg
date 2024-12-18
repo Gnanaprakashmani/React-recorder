@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560">
+    <g mask="url(&quot;#SvgjsMask1005&quot;)" fill="none">
+        <rect width="1440" height="560" x="0" y="0" fill="#0e2a47"></rect>
+        <g transform="translate(0, 5.6)" stroke-linecap="round">
+            <path d="M295 192.37 L295 367.63" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M329 145.13 L329 414.87" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M363 236.63 L363 323.38" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M397 211.75 L397 348.25" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M431 130.61 L431 429.39" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M465 221.48 L465 338.52" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M499 154.22 L499 405.78" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M533 180.88 L533 379.12" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M567 222.72 L567 337.28" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M601 177.5 L601 382.5" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M635 168.2 L635 391.8" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M669 127.31 L669 432.69" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M703 157.66 L703 402.35" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M737 257.89 L737 302.11" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M771 189.87 L771 370.13" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M805 133.62 L805 426.38" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M839 215.33 L839 344.67" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M873 187.33 L873 372.67" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M907 127.63 L907 432.37" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M941 247.47 L941 312.53" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M975 214.41 L975 345.59" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M1009 182.13 L1009 377.87" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M1043 126.03 L1043 433.98" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M1077 158.75 L1077 401.25" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M1111 183.88 L1111 376.13" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+            <path d="M1145 126.99 L1145 433.01" stroke-width="25.5" stroke="rgba(255, 255, 255, 1)"></path>
+        </g>
+    </g>
+    <defs>
+        <mask id="SvgjsMask1005">
+            <rect width="1440" height="560" fill="#ffffff"></rect>
+        </mask>
+    </defs>
+</svg>

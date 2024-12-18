@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { v4 } from "uuid";
 import { toast } from "react-toastify";
 import AWS from "aws-sdk";
 
 const VoiceList = ({ audios, setAudios }) => {
+  const [isLoading, setIsLoading] = useState(false);
   AWS.config.update({
     accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY,
     secretAccessKey: process.env.REACT_APP_AWS_SECRET_KEY,
@@ -12,6 +13,7 @@ const VoiceList = ({ audios, setAudios }) => {
 
   const s3 = new AWS.S3();
   const uploadFileToS3 = async () => {
+    setIsLoading(true);
     try {
       const uploadPromises = audios.map(async (info) => {
         const response = await fetch(info.blobURL);
@@ -34,6 +36,8 @@ const VoiceList = ({ audios, setAudios }) => {
     } catch (err) {
       toast.error("❌ Error uploading files!");
       console.error("Upload error:", err);
+    } finally {
+      setIsLoading(false);
     }
   };
   return (
@@ -51,9 +55,24 @@ const VoiceList = ({ audios, setAudios }) => {
           <button
             onClick={uploadFileToS3}
             className="upload-button"
-            disabled={!audios.length}
+            disabled={!audios.length || isLoading}
           >
-            Upload to S3
+            {isLoading ? (
+              <div class="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            ) : (
+              "Upload to S3"
+            )}
           </button>
         </div>
       </div>
