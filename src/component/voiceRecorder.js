@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import AWS from "aws-sdk";
-import { v4 } from "uuid";
-import { toast, ToastContainer } from "react-toastify";
+import {  ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MicRecorder from "mic-recorder-to-mp3";
 import { ReactComponent as PlayIcon } from "../assests/play.svg";
