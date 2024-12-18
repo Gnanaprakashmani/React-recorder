@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { v4 } from "uuid";
 import { toast } from "react-toastify";
 import AWS from "aws-sdk";
+import { ReactComponent as Bin } from "../assests/rubbishBin.svg";
 
 const VoiceList = ({ audios, setAudios }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -49,7 +50,17 @@ const VoiceList = ({ audios, setAudios }) => {
           </div>
           <div className="audio-container">
             {audios?.map((info, idx) => (
-              <audio controls src={info.blobURL} className="audio-player" />
+              <div className="binIcon">
+                <audio controls src={info.blobURL} className="audio-player" />
+                <span
+                  onClick={() => {
+                    setAudios(audios.filter((audio, index) => index !== idx));
+                  }}
+                  className="container_align"
+                >
+                  <Bin height={20} width={20} cursor={"pointer"} />
+                </span>
+              </div>
             ))}
           </div>
           <button
