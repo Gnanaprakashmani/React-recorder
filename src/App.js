@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./privateRoute";
 import AuthUI from "./Auth";
 import { ROUTE_CONSTANT } from "./constant/routeConstant";
-import AudioRecorderC from "./AudioRecorder";
+import Main from "./pages";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           path={ROUTE_CONSTANT.RECORD}
           element={
             <ProtectedRoute>
-              <AudioRecorderC />
+              <Main />
             </ProtectedRoute>
           }
         />
