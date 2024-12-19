@@ -42,50 +42,48 @@ const VoiceList = ({ audios, setAudios }) => {
     }
   };
   return (
-    <div>
-      <div className="audio-recorder">
-        <div className="audio-parallel-list">
-          <div>
-            <h1 className="title">Recordings</h1>
-          </div>
-          <div className="audio-container">
-            {audios?.map((info, idx) => (
-              <div className="binIcon">
-                <audio controls src={info.blobURL} className="audio-player" />
-                <span
-                  onClick={() => {
-                    setAudios(audios.filter((audio, index) => index !== idx));
-                  }}
-                  className="container_align"
-                >
-                  <Bin height={20} width={20} cursor={"pointer"} />
-                </span>
-              </div>
-            ))}
-          </div>
-          <button
-            onClick={uploadFileToS3}
-            className="upload-button"
-            disabled={!audios.length || isLoading}
-          >
-            {isLoading ? (
-              <div class="spinner">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            ) : (
-              "Upload to S3"
-            )}
-          </button>
+    <div className="audio-recorder">
+      <div className="audio-parallel-list">
+        <div>
+          <h1 className="title">Recordings</h1>
         </div>
+        <div className="audio-container">
+          {audios?.map((info, idx) => (
+            <div className="binIcon">
+              <audio controls src={info.blobURL} className="audio-player" />
+              <span
+                onClick={() => {
+                  setAudios(audios.filter((audio, index) => index !== idx));
+                }}
+                className="container_align"
+              >
+                <Bin height={20} width={20} cursor={"pointer"} />
+              </span>
+            </div>
+          ))}
+        </div>
+        <button
+          onClick={uploadFileToS3}
+          className="upload-button"
+          disabled={!audios.length || isLoading}
+        >
+          {isLoading ? (
+            <div class="spinner">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          ) : (
+            "Upload to S3"
+          )}
+        </button>
       </div>
     </div>
   );

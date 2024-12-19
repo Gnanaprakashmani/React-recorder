@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import AWS from "aws-sdk";
-import {  ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MicRecorder from "mic-recorder-to-mp3";
 import { ReactComponent as PlayIcon } from "../assests/play.svg";
 import { ReactComponent as PauseIcon } from "../assests/pause.svg";
-
+import { ReactComponent as MicIcon } from "../assests/micIcon.svg";
 function VoiceRecorder({ setAudios }) {
   const [isStart, setIsStart] = useState(false);
   const [time, setTime] = useState(0);
@@ -48,7 +48,7 @@ function VoiceRecorder({ setAudios }) {
       barsContainer.innerHTML = "";
 
       for (let i = 0; i < bufferLength; i++) {
-        const barHeight = dataArray[i];
+        const barHeight = dataArray[i] / 4;
 
         const bar = document.createElement("div");
         bar.style.height = `${Number(barHeight)}px`;
@@ -100,6 +100,9 @@ function VoiceRecorder({ setAudios }) {
         const audioURL = URL.createObjectURL(blob);
         setAudios((prev) => [...prev, { blob, blobURL: audioURL }]);
         setIsStart(false);
+        if (barsRef.current) {
+          barsRef.current.innerHTML = "";
+        }
 
         cancelAnimationFrame(animationIdRef.current);
 
@@ -122,8 +125,6 @@ function VoiceRecorder({ setAudios }) {
     secretAccessKey: process.env.REACT_APP_AWS_SECRET_KEY,
     region: "eu-north-1",
   });
-
-
 
   // const uploadFileToS3 = async () => {
   //   const response = await fetch(audioData.blobURL);
@@ -152,6 +153,7 @@ function VoiceRecorder({ setAudios }) {
         <div>
           <h1 className="title">Voice Recorder</h1>
         </div>
+        <MicIcon />
         <h3 className="time-title">{formattedTime}</h3>
         <div className="recorder-section">
           <div className="visualizer-section">
@@ -161,10 +163,38 @@ function VoiceRecorder({ setAudios }) {
               style={{
                 display: "flex",
                 justifyContent: "flex-start",
-                height: "150px",
+                height: "50px",
                 flexDirection: "row",
+                gap: "2px",
               }}
-            />
+            >
+              {!isStart && (
+                // <div
+                //   style={{
+                //     width: "100%",
+                //     height: "50px",
+                //     backgroundColor: "#eee",
+                //     borderRadius: "10px",
+                //   }}
+                // >
+                //   <p
+                //     style={{
+                //       textAlign: "center",
+                //       color: "#888",
+                //     }}
+                //   >
+                //     Start Recording
+                //   </p>
+                // </div>
+                <div className="dummy-static-wave">
+                  {Array(40)
+                    .fill(0)
+                    .map(() => (
+                      <div className="bar"></div>
+                    ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
         <div className="button-group">
